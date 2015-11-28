@@ -1,5 +1,4 @@
-#include "Date.h"
-#include <gtest/gtest.h>
+#include "stdafx.h"
 
 TEST(NdTest, leap400) {
 	Date date = Date(28, 2, 400);
