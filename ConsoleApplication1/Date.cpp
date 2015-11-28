@@ -2,13 +2,34 @@
 #include <iostream>
 
 
-Date::Date()
+Date::Date():
+	day(1), month(1), year(1900)
+{
+}
+
+Date::Date(int dd, int mm, int yy):
+	day(dd), month(mm), year(yy)
 {
 }
 
 
 Date::~Date()
 {
+}
+
+int Date::getDay() const
+{
+	return day;
+}
+
+int Date::getMonth() const
+{
+	return month;
+}
+
+int Date::getYear() const
+{
+	return year;
 }
 
 void Date::print()
