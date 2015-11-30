@@ -12,9 +12,22 @@ Date::Date(int dd, int mm, int yy):
 {
 }
 
+Date::Date(const Date &org):
+day(org.day), month(org.month), year(org.year)
+{
+}
 
 Date::~Date()
 {
+}
+
+Date& Date::operator=(const Date &source){
+	if (this != &source){
+		day = source.day;
+		month = source.month;
+		year = source.year;
+	}
+	return *this;
 }
 
 int Date::getDay() const

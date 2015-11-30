@@ -1,5 +1,8 @@
 #include "stdafx.h"
 
+#include <gtest/gtest.h>
+#include "weekLater.h"
+
 TEST(NextDayTest, leap_years) {
 
 	Date date = Date(28, 2, 400);
@@ -30,7 +33,7 @@ TEST(NextDayTest, whole_year){
 	EXPECT_EQ(1901, date.getYear());
 }
 
-TEST(NexTDayTest, def_cstrt_print){
+TEST(NextDayTest, def_cstrt_print){
 
 	Date date;
 	std::stringstream strm;
@@ -38,8 +41,23 @@ TEST(NexTDayTest, def_cstrt_print){
 	EXPECT_STREQ("1/1/1900\n", strm.str().c_str());
 }
 
+TEST(weekLaterTest, basic){
+	Date d1 = Date(1, 1, 2000);
+	Date d2;
+	d2 = weekLater(d1);
+	EXPECT_EQ(8, d2.getDay());
+	EXPECT_EQ(1, d2.getMonth());
+	EXPECT_EQ(2000, d2.getYear());
+}
+
 
 int main(int ac, char* av[]) {
 	testing::InitGoogleTest(&ac, av);
 	return RUN_ALL_TESTS();
+	/*
+	Date date;
+	date.print(std::cout);
+	system("PAUSE");
+	return 0;
+	*/
 }

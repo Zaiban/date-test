@@ -18,9 +18,15 @@
     <ClCompile Include="Date.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="weekLater.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Date.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="weekLater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
