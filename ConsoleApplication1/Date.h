@@ -1,4 +1,5 @@
 #pragma once
+#include <sstream>
 class Date
 {
 public:
@@ -9,7 +10,7 @@ public:
 	int getMonth() const;
 	int getYear() const;
 
-	void print();
+	void print(std::ostream& out);
 	void next_day();
 
 private:

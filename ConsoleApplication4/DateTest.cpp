@@ -19,6 +19,25 @@ TEST(NextDayTest, leap_years) {
 
 }
 
+TEST(NextDayTest, whole_year){
+
+	Date date = Date(1, 1, 1900);
+	for (int i = 0; i < 365; i++){
+		date.next_day();
+	}
+	EXPECT_EQ(1, date.getDay());
+	EXPECT_EQ(1, date.getMonth());
+	EXPECT_EQ(1901, date.getYear());
+}
+
+TEST(NexTDayTest, def_cstrt_print){
+
+	Date date;
+	std::stringstream strm;
+	date.print(strm);
+	EXPECT_STREQ("1/1/1900\n", strm.str().c_str());
+}
+
 
 int main(int ac, char* av[]) {
 	testing::InitGoogleTest(&ac, av);

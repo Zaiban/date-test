@@ -32,9 +32,9 @@ int Date::getYear() const
 	return year;
 }
 
-void Date::print()
+void Date::print(std::ostream& out)
 {
-	std::cout << day << '/' << month << '/' << year << std::endl;
+	out << day << '/' << month << '/' << year << std::endl;
 }
 
 void Date::next_day()
